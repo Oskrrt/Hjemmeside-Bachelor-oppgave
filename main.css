@@ -92,7 +92,7 @@ header ul li {
     font-size: 3em;
     color:	white;
 }
-.dokumentContainer {
+.dokumentContainer, .studentContainer {
     width: 70%;
     display: flex;
     justify-content: space-evenly;
@@ -107,4 +107,13 @@ header ul li {
 #section3{
     background-color: 	#e68c77;
     height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#section3 h1{
+    font-size: 3em;
+    color: white;
 }

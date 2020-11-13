@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+    
+    scroll-behavior: smooth;
+}
+
+#section1 {
+    height: 100%;
+    width: 100vw; 
+    min-height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: #353839;
+}
+
+#section2, #section3 {
+    height: 75%;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 24px;
+    height: 10%;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+header ul, header ul li a {
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+
+header ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+ #hero {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("images/hero.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+
+#hero_banner {
+    text-align: center;
+    background-color: white;
+    width: auto;
+    margin: 2em;
+    height: auto;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 0;
+    padding: 1em;
+}
+#hero_banner h1, #hero_banner h3, #hero_banner h4 {
+    margin: 0.5em;
+}
+#section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #62c9dd;
+}
+#section2 h1 {
+    font-size: 3em;
+    color:	white;
+}
+.dokumentContainer {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dokument{
+    height: 300px;
+    width: 200px;
+    border: solid white 2px;
+}
+
+#section3{
+    background-color: 	#e68c77;
+    height: 60%;
+}

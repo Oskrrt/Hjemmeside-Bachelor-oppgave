@@ -3,58 +3,81 @@
     margin: 0;
 }
 body, html {
-    overflow-x: hidden;
     margin: 0;
     height: 100%;
     width: 100%;
     font-family: 'Noto Sans JP', sans-serif;
-    
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 #header{
-    position: absolute;
-    height: 8%
-}
-#section1 {
-    height: 100%;
-    width: 100vw; 
-    min-height: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: hidden;
-   
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0%;
+    
+    padding: 0 2em;
+    z-index: 1000;
 }
 
-#section2, #section3 {
-    height: 75%;
+#logo {
+    cursor: pointer;
+
+}
+
+#section1 {
+    height: 100vh;
+    width: 100vw; 
+    
 }
 
 header {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-around;
-    font-size: 24px;
+    justify-content: space-between;
     height: 10%;
+    font-size: 24px;
     background-color: white;
     border-bottom: 1px solid black;
 }
-
-header ul, header ul li a {
+.nav {
+    background-color: white;
+}
+.nav, .nav li a {
     display: flex;
     list-style-type: none;
     text-decoration: none;
+    color: #3e3e3c;
+    font-size: 1.5rem;
+}
+
+.nav li {
+    padding: .5rem;
+    position: relative;
+}
+
+.nav li a:hover {
     color: black;
 }
 
-header ul li {
+.navToggle {
+    cursor: pointer;
+}
+.closed {
+    display: none;
+}
+.open {
+    position: sticky;
+    top: 10%;
     display: flex;
-    justify-content: space-between;
-    margin: 1em;
+    flex-direction: column;
+    border-bottom: solid black 1px;
 }
 
+
+
  #hero {
-    height: 90%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,9 +93,6 @@ header ul li {
     background-color: white;
     width: auto;
     margin: 2em;
-    height: auto;
-    color: #3e3e3c;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,40 +103,101 @@ header ul li {
 }
 #hero_banner h1, #hero_banner h3, #hero_banner h4 {
     margin: 0.5em;
+    color: #3e3e3c;
 }
 #section2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: #62c9dd;
 }
-#section2 h1 {
+ h1 {
     font-size: 3em;
     color:	white;
 }
 .dokumentContainer, .studentContainer {
-    width: 70%;
     display: flex;
     justify-content: space-evenly;
+    gap: 3em;
 }
-
-.dokument{
+.dokument, .student{
     height: 300px;
     width: 200px;
-    border: solid white 2px;
-}
-
-#section3{
-    background-color: 	#e68c77;
-    height: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
+@media only screen and (max-width: 900px) {
+    .dokumentContainer, .studentContainer {
+        flex-direction: column;
+        gap: 0;
+    }
+    .dokument {
+        height: 150px;
+    }
 
-#section3 h1{
-    font-size: 3em;
+    h1 {
+        font-size: 2em;
+    }
+}
+
+
+.dokument i {
     color: white;
+    font-size: 5rem;
+}
+.docLink {
+    text-decoration: none;
+    color: white;
+}
+#section3{
+    background-color: #e68c77;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    text-align: center;
+}
+
+.studentImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+#eskil {
+    background-image: url("images/eskil.jpg");
+    
+}
+
+#oskar {
+    background-image: url("images/oskar.jpg");
+}
+
+#simen {
+    background-image: url("images/simen.jpg");
+    background-position: 50% 40%;
+}
+
+#adrian {
+    background-image: url("images/adrian.jpg");
+    background-position: 50% 90%;
+}
+
+footer ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+footer {
+    background-color: #3e3e3c;
+    color: white;
+    height: 10%;
+    padding: 2em;
 }

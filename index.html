@@ -6,25 +6,29 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
 </head>
 <body>
+    <header id = "header">
+        <div id = "logo"><a href="#section1"><img src="images/logo.JPG" width="150" alt="Logo"></a></div>
+        <a class="navToggle" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </a>
+    </header>
+    <ul class="nav closed">
+        <li><a href="#section1">Hjem</a></li>
+        <li><a href="#section2">Dokumenter</a></li>
+        <li><a href="#section3">Studentene</a></li>
+    </ul>
     <section class="section" id = "section1">
-        <header id = "header">
-            <div id = "logo">en logo</div>
-            <ul>
-                <li><a href="#section1">Hjem</a></li>
-                <li><a href="#section2">Dokumenter</a></li>
-                <li><a href="#section3">Studentene</a></li>
-                <li><a href="">Prosjektet</a></li>
-            </ul>
-        </header>
+        
         <div id="hero">
             <div id="hero_banner"> 
-                <h1>Bachelorprosjekt vår 2021</h1>
-                <h2>Siden er under konstruksjon</h2>
+                <h1 id="heroText">Bachelorprosjekt vår 2021</h1>
                 <h4>gruppe 43</h4>
-                <h3>Way2Easy Documents - Kjøp og salg av akademiske dokumenter</h3>
+                <h3>Way2Easy Dokumarked - Kjøp og salg av akademiske dokumenter</h3>
                <!--  <button><a href="#section2">Utforsk</a></button> -->
             </div>
         </div>
@@ -32,24 +36,28 @@
     <section class="section" id = "section2">
         <h1>Dokumenter</h1>
         <div class = "dokumentContainer">
-            <a href="https://www.cs.hioa.no/data/bachelorprosjekt/reg/reports/2021_gr43_Statusrapport.pdf">
+            <a href="https://www.cs.hioa.no/data/bachelorprosjekt/reg/reports/2021_gr43_Statusrapport.pdf" class="docLink">
                 <div class="dokument" id="prosjekskisse">
-                    <h4>Statusrapport</h4>
+                    <i class="far fa-file-alt"></i>
+                    <h4>Statusrapport</h4> 
                 </div>
             </a>
-            <a href="https://www.cs.hioa.no/data/bachelorprosjekt/reg/scetches/2021_gr43_Prosjektskisse%20Way2Easy.pdf">
+            <a href="https://www.cs.hioa.no/data/bachelorprosjekt/reg/scetches/2021_gr43_Prosjektskisse%20Way2Easy.pdf" class="docLink">
                 <div class="dokument">
+                    <i class="far fa-file-alt"></i>
                     <h4>Prosjektskisse</h4>
                 </div>
             </a>
-            <a href="Forprosjekt.pdf">
+            <a href="Forprosjekt.pdf" class="docLink">
                 <div class="dokument">
+                    <i class="far fa-file-alt"></i>
                     <h4>Forprosjekt</h4>
                 </div>
             </a>
-            <a href="">
+            <a href="" class="docLink">
                 <div class="dokument">
-                    <h4>Prosjektrapport</h4>
+                    <i class="far fa-file-alt"></i>
+                    <h4>Sluttrapport</h4>
                 </div>
             </a>
         </div>
@@ -58,21 +66,34 @@
     <section class="section" id = "section3">
         <h1>Studentene</h1>
         <div class = "studentContainer">
-            <div class="dokument" id="prosjekskisse">  
+            <div class="student">
+                <div class="studentImage" id="simen"></div>
                 <h4>Simen Nordgaard Renberg</h4>
+                <p>Anvendt datateknologi</p>
             </div>
-            <div class="dokument">
+            <div class="student">
+                <div class="studentImage" id="adrian"></div>
                 <h4>Adrian Nilssen Nicolaisen</h4>
+                <p>Anvendt datateknologi</p>
             </div>
-            <div class="dokument">
+            <div class="student">
+                <div class="studentImage" id="eskil"></div>
                 <h4>Eskil Nysether</h4>
+                <p>Anvendt datateknologi</p>
             </div>
-            <div class="dokument">
+            <div class="student">
+                <div class="studentImage" id="oskar"></div>
                 <h4>Oskar Ruyter</h4>
+                <p>Anvendt datateknologi</p>
             </div>
         </div>
     </section>
-    <section class="section" id = "section4">
-    </section>
+    <footer>
+        <ul>
+            <li>Ikoner er tatt fra Fontawesome</li>
+            <li>Font fra googlefonts</li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
